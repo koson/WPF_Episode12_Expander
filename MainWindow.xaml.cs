@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace WpfDemoTemplate
+namespace WPF_Episode12_Expander
 {
     public partial class MainWindow : Window
     {
