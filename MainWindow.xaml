@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Episode12_Expander"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WPF Episode 12: Expander Demo" Height="600" Width="1000">
+    
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Navigation Panel -->
+        <Border Grid.Column="0" Background="#2C3E50" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Expander Demos" 
+                           FontSize="16" FontWeight="Bold" 
+                           Foreground="White" Margin="0,0,0,20"/>
+                
+                <Button Content="1. Basic Expander" Click="ShowBasicExpander" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="2. IsExpanded" Click="ShowIsExpanded" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="3. ExpandDirection" Click="ShowExpandDirection" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="4. FAQ Section" Click="ShowFAQ" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="5. Settings Panel" Click="ShowSettings" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="6. Product Details" Click="ShowProductDetails" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="7. Navigation Menu" Click="ShowNavigation" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="8. Styled Expanders" Click="ShowStyledExpanders" 
+                        Margin="0,5" Padding="10,5"/>
+                <Button Content="9. Advanced Filter" Click="ShowAdvancedFilter" 
+                        Margin="0,5" Padding="10,5"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- Content Panel -->
+        <ScrollViewer Grid.Column="1" x:Name="ContentPanel" 
+                      VerticalScrollBarVisibility="Auto" 
+                      Background="#ECF0F1">
+            <Border Background="White" Margin="20" Padding="30" 
+                    CornerRadius="10">
+                <StackPanel>
+                    <TextBlock Text="Welcome to Expander Demo" 
+                               FontSize="28" FontWeight="Bold" 
+                               Margin="0,0,0,20"/>
+                    
+                    <TextBlock TextWrapping="Wrap" FontSize="14" Margin="0,10">
+                        Expander is a control that shows or hides content with a 
+                        collapsible panel. It's perfect for saving screen space 
+                        and organizing information hierarchically.
+                    </TextBlock>
+                    
+                    <TextBlock TextWrapping="Wrap" FontSize="14" Margin="0,10">
+                        Click any button on the left to see different Expander demos!
+                    </TextBlock>
+                    
+                    <Border Background="LightBlue" Padding="15" Margin="0,20" 
+                            CornerRadius="5" BorderBrush="Blue" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="Key Features:" FontWeight="Bold" 
+                                       FontSize="16" Margin="0,0,0,10"/>
+                            <TextBlock Text="• Collapsible content sections" Margin="0,5"/>
+                            <TextBlock Text="• IsExpanded property control" Margin="0,5"/>
+                            <TextBlock Text="• Four expand directions" Margin="0,5"/>
+                            <TextBlock Text="• Customizable headers" Margin="0,5"/>
+                            <TextBlock Text="• Perfect for FAQs and settings" Margin="0,5"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
     </Grid>
 </Window>
